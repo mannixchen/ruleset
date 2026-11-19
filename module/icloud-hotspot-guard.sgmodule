@@ -1,0 +1,73 @@
+#!name=热点防静默大流量
+#!desc=仅在 iPhone 热点网关 172.20.10.1 下拦截后台同步、系统更新、网盘客户端和下载器；不拦文档网页、YouTube、坚果云
+#!system=mac
+
+[Rule]
+# 当前 Mac 在 iPhone 热点下读不到稳定 SSID，但网关稳定为 172.20.10.1。
+# 所有规则都绑定 ROUTER，普通 Wi-Fi 下不会生效。
+
+# iCloud / CloudKit 内容分发。保留这组是因为本次偷跑流量实际命中 icloud-content.com.cn。
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,icloud-content.com.cn)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,icloud-content.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,apple-cloudkit.com)),REJECT
+
+# Apple 系统更新 / App Store 大包下载。
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN,mesu.apple.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN,gdmf.apple.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN,xp.apple.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN,swcdn.apple.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN,swdist.apple.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN,swscan.apple.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,updates-http.cdn-apple.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,appldnld.apple.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,oscdn.apple.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,cdn-apple.com)),REJECT
+
+# Google Photos / Drive 后台客户端。不要拦 googleusercontent.com / googlevideo.com，避免误伤文档和 YouTube。
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,photosdata-pa.googleapis.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,photoslibrary.googleapis.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,photos.googleapis.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/Google Drive.app/)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/Google Photos Backup.app/)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/Backup and Sync.app/)),REJECT
+
+# OneDrive / Office 后台同步和更新。不拦 sharepoint.com，避免误伤在线文档。
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,officecdn.microsoft.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,download.windowsupdate.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,delivery.mp.microsoft.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/OneDrive.app/)),REJECT
+
+# Dropbox 后台客户端。不拦 dropbox.com 网页。
+AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/Dropbox.app/)),REJECT
+
+# WPS 后台同步 / 更新。wpscdn.cn 是今天实际出现的大流量域名。
+# AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,wpscdn.cn)),REJECT
+# AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/wpsoffice.app/)),REJECT
+# AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/WPS Office.app/)),REJECT
+
+# 常见网盘客户端和下载器。坚果云故意不拦。
+AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/BaiduNetdisk.app/)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/aDrive.app/)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/115电脑版.app/)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/Thunder.app/)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/qBittorrent.app/)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (PROCESS-NAME,/Applications/Transmission.app/)),REJECT
+
+# 游戏平台后台更新。
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,steamcontent.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,steamstatic.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,epicgames.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,unrealengine.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,battle.net)),REJECT
+
+# test
+# AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN-SUFFIX,baidu.com)),REJECT
+
+# updates
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN,downloads.claude.ai)),REJECT
+
+#vscode
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN,update.code.visualstudio.com)),REJECT
+AND,((SUBNET,ROUTER:172.20.10.1), (DOMAIN,vscode.download.prss.microsoft.com)),REJECT
+
+
