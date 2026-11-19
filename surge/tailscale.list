@@ -1,0 +1,4 @@
+# Tailscale 标准 IPv4 CGNAT 与 IPv6 ULA 网段
+# 注意：不加 no-resolve，以便走到此处的 Tailnet 域名先解析出 100.64.0.0/10 再自动命中 Tailscale 通道。
+IP-CIDR,100.64.0.0/10
+IP-CIDR6,fd7a:115c:a1e0::/48

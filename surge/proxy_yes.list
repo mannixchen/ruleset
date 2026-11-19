@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,86gamestore.com
 DOMAIN-KEYWORD,v2ex.co
 
 # 开发、工具与文档
+AND,((DOMAIN-SUFFIX,jumpdesktop.com), (PROTOCOL,TCP))
 DOMAIN-SUFFIX,element-plus.org
 DOMAIN-KEYWORD,algolia
 DOMAIN-KEYWORD,nssurge.com

@@ -18,7 +18,8 @@
 |---|---|---|---|
 | `surge/google_photos.list` | Google Photos 网页与专用上传 API（前置优先于通用 Google） | `🏪️ 云盘储存` | `https://raw.githubusercontent.com/mannixchen/ruleset/main/surge/google_photos.list` |
 | `surge/cloud_storage.list` | Google Drive / PikPak / Box / pCloud 核心域名（前置大流量例外） | `🏪️ 云盘储存` | `https://raw.githubusercontent.com/mannixchen/ruleset/main/surge/cloud_storage.list` |
-| `surge/proxy_yes.list` | 自定义强制走代理的网址域名 | `🚀 节点选择` | `https://raw.githubusercontent.com/mannixchen/ruleset/main/surge/proxy_yes.list` |
+| `surge/proxy_yes.list` | 自定义强制走代理的网址域名（含 Jump Desktop 云端 TCP 规则） | `🚀 节点选择` | `https://raw.githubusercontent.com/mannixchen/ruleset/main/surge/proxy_yes.list` |
+| `surge/tailscale.list` | Tailscale 标准 IPv4 (`100.64.0.0/10`) 与 IPv6 (`fd7a:115c:a1e0::/48`) 网段 | `Home-Tailscale` | `https://raw.githubusercontent.com/mannixchen/ruleset/main/surge/tailscale.list` |
 | `surge/direct_yes.list` | 自定义强制直连的网址、路由器管理域名与局域网保留网段 | `DIRECT` | `https://raw.githubusercontent.com/mannixchen/ruleset/main/surge/direct_yes.list` |
 | `surge/reject_yes.list` | 自定义广告、遥测与追踪拦截黑名单 | `REJECT` | `https://raw.githubusercontent.com/mannixchen/ruleset/main/surge/reject_yes.list` |
 

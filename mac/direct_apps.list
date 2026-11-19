@@ -1,4 +1,7 @@
 # Mac 桌面端：强制直连的桌面应用进程（走 DIRECT）
+PROCESS-NAME,/Applications/Jump Desktop.app/
+PROCESS-NAME,/Applications/Jump Desktop Connect.app/
+PROCESS-NAME,/Applications/爱奇艺.app/Contents/MacOS/qiyimac
 PROCESS-NAME,/Applications/DingTalk.app/
 PROCESS-NAME,/Applications/BaiduNetdisk.app/Contents/MacOS/BaiduNetdisk
 PROCESS-NAME,"/Applications/BaiduNetdisk.app/Contents/Frameworks/BaiduNetdisk Helper.app/Contents/MacOS/BaiduNetdisk Helper"
