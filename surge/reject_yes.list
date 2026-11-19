@@ -1,0 +1,5 @@
+# 自定义拦截与软件遥测黑名单 (reject_yes.list)
+DOMAIN-SUFFIX,d.meituan.net
+DOMAIN,analytics.wondershare.cc
+DOMAIN,pc-api.wondershare.cc
+DOMAIN-KEYWORD,pc-api

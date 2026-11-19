@@ -1,0 +1,19 @@
+# 自定义走代理域名列表 (proxy_yes.list)
+# 维护方式：在此文件增删一行，所有设备刷新外部资源即同步生效。
+
+# 常用社区与资讯
+DOMAIN-SUFFIX,1point3acres.com
+DOMAIN-SUFFIX,1lou.me
+DOMAIN-SUFFIX,86gamestore.com
+DOMAIN-KEYWORD,v2ex.co
+
+# 开发、工具与文档
+DOMAIN-SUFFIX,element-plus.org
+DOMAIN-KEYWORD,algolia
+DOMAIN-KEYWORD,nssurge.com
+DOMAIN-KEYWORD,surge
+DOMAIN-KEYWORD,appsliced.co
+DOMAIN-KEYWORD,libgen.is
+DOMAIN-KEYWORD,1x.com
+DOMAIN-KEYWORD,ip.istatmenus.app
+DOMAIN,plus.younoyes.com

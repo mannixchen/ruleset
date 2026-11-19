@@ -1,0 +1,16 @@
+# Mac 桌面端：相册与国外网盘客户端进程（走云盘储存策略组）
+PROCESS-NAME,/Applications/Google Photos Backup.app/
+PROCESS-NAME,/Applications/Backup and Sync.app/
+PROCESS-NAME,/Applications/Google Drive.app/
+PROCESS-NAME,GoogleDriveFS
+PROCESS-NAME,BackupandSync
+PROCESS-NAME,/Applications/PikPak.app/
+PROCESS-NAME,/Applications/Box.app/
+PROCESS-NAME,/Applications/Box Sync.app/
+PROCESS-NAME,/Applications/pCloud Drive.app/
+PROCESS-NAME,/Applications/OneDrive.app/
+PROCESS-NAME,/Applications/Dropbox.app/
+PROCESS-NAME,/Applications/MEGAsync.app/
+PROCESS-NAME,/Applications/MEGA.app/
+PROCESS-NAME,/Applications/TeraBox.app/
+PROCESS-NAME,/Applications/Dubox.app/

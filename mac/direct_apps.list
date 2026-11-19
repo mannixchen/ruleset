@@ -1,0 +1,11 @@
+# Mac 桌面端：强制直连的桌面应用进程（走 DIRECT）
+PROCESS-NAME,/Applications/DingTalk.app/
+PROCESS-NAME,/Applications/BaiduNetdisk.app/Contents/MacOS/BaiduNetdisk
+PROCESS-NAME,"/Applications/BaiduNetdisk.app/Contents/Frameworks/BaiduNetdisk Helper.app/Contents/MacOS/BaiduNetdisk Helper"
+PROCESS-NAME,/Applications/网速管家.app/Contents/MacOS/网速管家
+PROCESS-NAME,"/Applications/网速管家.app/Contents/Frameworks/网速管家 Helper.app/Contents/MacOS/网速管家 Helper"
+PROCESS-NAME,/Applications/VideoFusion-macOS.app/Contents/MacOS/VideoFusion-macOS
+PROCESS-NAME,/Applications/TencentMeeting.app/Contents/MacOS/TencentMeeting
+PROCESS-NAME,/Applications/aDrive.app/Contents/MacOS/aDrive
+PROCESS-NAME,/Applications/115电脑版.app/Contents/MacOS/115
+PROCESS-NAME,/Applications/MindMaster.app/Contents/MacOS/MindMaster

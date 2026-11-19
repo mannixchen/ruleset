@@ -1,0 +1,20 @@
+# 国外网盘专用域名（前置大流量例外，统一归入云盘储存策略组）
+# OneDrive / Dropbox / MEGA / TeraBox / Dubox 由上游独立规则集覆盖。
+
+# Google Drive：仅保留专用域名，不泛匹配 www.googleapis.com / docs.google.com / googleusercontent.com
+DOMAIN-SUFFIX,drive.google.com
+DOMAIN-SUFFIX,googledrive.com
+DOMAIN,drive.usercontent.google.com
+
+# PikPak：保留专用关键词，不引入迅雷共用 sandai.net
+DOMAIN-KEYWORD,mypikpak
+
+# Box：官方防火墙文档核心域名 (https://support.box.com/hc/en-us/articles/360043696434)
+DOMAIN-SUFFIX,box.com
+DOMAIN-SUFFIX,box.net
+DOMAIN-SUFFIX,boxcdn.net
+DOMAIN-SUFFIX,boxcloud.com
+
+# pCloud：服务与分享域名
+DOMAIN-SUFFIX,pcloud.com
+DOMAIN-SUFFIX,pcloud.link

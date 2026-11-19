@@ -1,0 +1,6 @@
+# Mac 桌面端：非 Google 系 AI 应用与 CLI 进程（走 AI 服务策略组）
+PROCESS-NAME,/Applications/Claude.app/
+PROCESS-NAME,claude
+PROCESS-NAME,claude-code
+PROCESS-NAME,opencode
+PROCESS-NAME,/Users/chenmingming/.local/share/claude/versions/*

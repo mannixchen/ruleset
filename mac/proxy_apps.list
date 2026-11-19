@@ -1,0 +1,7 @@
+# Mac 桌面端：强制走代理的桌面应用进程（走节点选择策略组）
+PROCESS-NAME,"/Applications/Spotify.app/Contents/Frameworks/Spotify Helper.app/Contents/MacOS/Spotify Helper"
+PROCESS-NAME,/Applications/Spotify.app/Contents/MacOS/Spotify
+PROCESS-NAME,/Applications/Telegram.app/Contents/MacOS/Telegram
+PROCESS-NAME,Steam
+PROCESS-NAME,Surge
+PROCESS-NAME,/System/Applications/Music.app/Contents/MacOS/Music
