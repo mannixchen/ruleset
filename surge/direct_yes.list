@@ -2,6 +2,8 @@
 # 注意：不包含策略列；不包含 100.64.0.0/10，避免覆盖 Tailscale CGNAT 网段。
 
 # 个人常用直连与服务域名
+# Apple / 云上贵州 iCloud 存储与同步节点 (避免被第三方去广告规则误拦截)
+DOMAIN-SUFFIX,convection.cn
 DOMAIN-SUFFIX,yundu.lol
 DOMAIN-SUFFIX,totokens.cc
 DOMAIN-SUFFIX,yostoken.top
