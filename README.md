@@ -8,7 +8,7 @@
 2. **通用域名与桌面进程分离**：
    - `surge/*.list`：纯域名与 IP 规则，三端 Surge 与 Stash (`classical` / `text`) 均可直接订阅。
    - `mac/*.list`：仅 macOS 桌面端使用的 `PROCESS-NAME` 进程规则。
-3. **不含任何私有/敏感信息**：家庭私有服务、公司内网、Tailscale 网段及代理订阅凭据均不放入本仓库。
+3. **不含任何私有/敏感信息**：家庭私有服务、公司内网、个人 Tailnet 设备/主机信息及代理订阅凭据均不放入本仓库。`surge/tailscale.list` 中的标准 Tailscale 地址段属于通用规则，可以保留。
 
 ## 文件清单与推荐绑定策略
 
